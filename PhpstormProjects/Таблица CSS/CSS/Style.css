@@ -1,0 +1,43 @@
+.twitter-table {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 750px;
+    color: #172f46;
+    border-collapse: collapse;
+
+    font-family: Calibri, sans-serif;
+    font-weight: 100;
+    font-size: 1.4em;
+
+    text-align: left;
+    text-indent: 10px;
+}
+
+.twitter-table th, .twitter-table td {
+
+    border: 1px solid #d6d6d6;
+    padding-bottom: 11px;
+    padding-top: 11px;
+}
+
+.twitter-table > thead {
+    background-color: #3498DB;
+    color: #F7FBFE;
+}
+
+.twitter-table > tbody > tr:nth-child(odd) {
+    background-color: #EEEEEE;
+}
+
+.twitter-table > thead th:nth-child(1) {
+    width: 154px;
+}
+
+.twitter-table > thead th:nth-child(2) {
+    width: 149px;
+}
+
+.twitter-table > thead th:nth-child(3) {
+    width: 269px;
+}

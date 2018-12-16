@@ -1,0 +1,63 @@
+//2
+
+CREATE TABLE type(
+id int(11) NOT NULL AUTO_INCREMENT , 
+typeRussianName varchar(100) NOT NULL,
+typeLatinName varchar(100) NOT NULL,
+PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO type (typeRussianName, typeLatinName) VALUES ('Собака', 'canem'),
+('Кот', 'feles'),
+('Крыса', 'rat'),
+('Попугай', 'mascarene parrot'),
+('Черепаха', 'testudo graeca'),
+('Белка', 'dapibus'),
+('Хомяк', 'criceta'),
+('Змея', 'anguis'),
+('Крокодил', 'crocodili'),
+('Лиса', 'vulpis');
+ 
+CREATE TABLE doctors(
+id int(11) NOT NULL AUTO_INCREMENT, 
+lastName varchar(100) NOT NULL,
+name varchar(100) NOT NULL,
+phone bigint,
+salary int,
+employmentDate DATE,
+PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO doctors (lastName, name, phone, salary, employmentDate)
+VALUES ('Петров', 'Иван', '89131234567', 20000, 20181120),
+('Иванов', 'Андрей', '89131234568', 21000, 20181121),
+('Шумилова', 'Анна', '89131234569', 22000, 20181122),
+('Вяткина', 'Елена', '89131234570', 23000, 20181123),
+('Антонов', 'Евгений', '89131234571', 24000, 20171124),
+('Кулик', 'Надежда', '89131234572', 25000, 20171125),
+('Романов', 'Игорь', '89131234573', 26000, 20171021),
+('Сидорова', 'Галина', '89131234574', 27000, 20171021),
+('Черепанов', 'Алексей', '89131234575', 28000, 20170521),
+('Николаев', 'Николай', '89131234576', 29000, 20170421);
+
+//3
+
+ALTER TABLE animals ADD COLUMN ownerСomment varchar(255);
+
+//4
+
+SELECT SUM(salary) FROM doctors;
+
+//5
+
+UPDATE animals SET ownerСomment =  (IF (gender = 'м', CONCAT_WS(" ", 'Ваш', name, 'весит', weight/1000, 'кг'), CONCAT_WS(" ", 'Ваша',  name,   'весит', weight/1000, 'кг')));
+
+//6
+
+INSERT INTO type (typeRussianName) SELECT DISTINCT (species) FROM animals;
+
+//7 не уверен, что это именно то что требовалось сделать
+
+UPDATE animals, type SET animals.species_id = type.id
+WHERE animals.species = type.typeNameRussian;
+

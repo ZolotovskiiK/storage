@@ -1,0 +1,49 @@
+body {
+    background-color: #FEEED6;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #676565;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 1.8em;
+    line-height: 1.1;
+
+}
+
+.title-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 760px;
+}
+
+.text-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 760px;
+}
+
+p {
+    text-indent: 1em;
+    text-align: justify;
+    font-size: 1em;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+span {
+    font-size: 1em;
+}
+
+.decoration {
+    text-decoration: line-through;
+}
+
+.text-color {
+    color: #378EB2;
+    font-weight: bold;
+}
+
